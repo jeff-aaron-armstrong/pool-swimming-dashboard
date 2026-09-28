@@ -1,0 +1,118 @@
+{
+  "goal_pace_s_per_100m": 120,
+  "benchmark": "Fastest rolling 500 m window that does not cross a pause",
+  "sessions": [
+    {
+      "date": "2026-08-19",
+      "distance_m": 1000,
+      "mean_pace_s_per_100m": 147.249,
+      "mean_strokes_per_25m": 15.375,
+      "pauses": 0,
+      "best_500m": {
+        "start_length": 18,
+        "end_length": 37,
+        "time_s": 732.39,
+        "pace_s_per_100m": 146.478,
+        "mean_strokes_per_25m": 14.95
+      }
+    },
+    {
+      "date": "2026-09-02",
+      "distance_m": 1250,
+      "mean_pace_s_per_100m": 142.934,
+      "mean_strokes_per_25m": 15.84,
+      "pauses": 1,
+      "best_500m": {
+        "start_length": 3,
+        "end_length": 22,
+        "time_s": 703.48,
+        "pace_s_per_100m": 140.696,
+        "mean_strokes_per_25m": 15.95
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "distance_m": 1050,
+      "mean_pace_s_per_100m": 144.853,
+      "mean_strokes_per_25m": 15.643,
+      "pauses": 0,
+      "best_500m": {
+        "start_length": 3,
+        "end_length": 22,
+        "time_s": 720.21,
+        "pace_s_per_100m": 144.042,
+        "mean_strokes_per_25m": 15.2
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "distance_m": 1350,
+      "mean_pace_s_per_100m": 139.533,
+      "mean_strokes_per_25m": 16.5,
+      "pauses": 5,
+      "best_500m": {
+        "start_length": 1,
+        "end_length": 20,
+        "time_s": 710.43,
+        "pace_s_per_100m": 142.086,
+        "mean_strokes_per_25m": 16.6
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "distance_m": 1800,
+      "mean_pace_s_per_100m": 134.922,
+      "mean_strokes_per_25m": 16.361,
+      "pauses": 2,
+      "best_500m": {
+        "start_length": 3,
+        "end_length": 22,
+        "time_s": 657.45,
+        "pace_s_per_100m": 131.49,
+        "mean_strokes_per_25m": 16
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "distance_m": 2100,
+      "mean_pace_s_per_100m": 137.125,
+      "mean_strokes_per_25m": 14.786,
+      "pauses": 2,
+      "best_500m": {
+        "start_length": 39,
+        "end_length": 58,
+        "time_s": 679.81,
+        "pace_s_per_100m": 135.962,
+        "mean_strokes_per_25m": 14.55
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "distance_m": 2000,
+      "mean_pace_s_per_100m": 139.98,
+      "mean_strokes_per_25m": 15.575,
+      "pauses": 3,
+      "best_500m": {
+        "start_length": 7,
+        "end_length": 26,
+        "time_s": 698.14,
+        "pace_s_per_100m": 139.628,
+        "mean_strokes_per_25m": 15.6
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "distance_m": 1500,
+      "mean_pace_s_per_100m": 136.549,
+      "mean_strokes_per_25m": 13.267,
+      "pauses": 3,
+      "best_500m": {
+        "start_length": 3,
+        "end_length": 22,
+        "time_s": 693.65,
+        "pace_s_per_100m": 138.73,
+        "mean_strokes_per_25m": 12.8
+      }
+    }
+  ]
+}
