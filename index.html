@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pool Swimming Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Pool Swimming Dashboard</h1>
+    <div class="subtitle">Breaststroke progress, centred on the best rolling pause-free 500 m.</div>
+  </header>
+  <main>
+    <section class="kpis">
+      <div class="card kpi"><div class="label">Latest best 500 m</div><div class="value" id="latestBest">—</div></div>
+      <div class="card kpi"><div class="label">Personal best 500 m pace</div><div class="value" id="pb500">—</div></div>
+      <div class="card kpi"><div class="label">Latest strokes / 25 m</div><div class="value" id="latestStrokes">—</div></div>
+      <div class="card kpi"><div class="label">Goal pace</div><div class="value">2:00 /100 m</div></div>
+    </section>
+
+    <section class="grid">
+      <div class="card plot-card"><div id="progression" class="plot"></div></div>
+      <div class="card plot-card"><div id="distributions" class="plot"></div></div>
+      <div class="card plot-card">
+        <div class="controls"><label for="sessionSelect">Session:</label><select id="sessionSelect"></select></div>
+        <div id="sessionPace" class="plot"></div>
+      </div>
+      <div class="card plot-card">
+        <div class="controls"><label for="scatterSelect">Show:</label>
+          <select id="scatterSelect"><option value="all">All swims</option></select>
+        </div>
+        <div id="paceStroke" class="plot"></div>
+      </div>
+    </section>
+
+    <section class="card table-card">
+      <h2>Session summary</h2>
+      <table>
+        <thead><tr><th>Date</th><th>Distance</th><th>Mean pace</th><th>Best 500 m</th><th>500 m time</th><th>Strokes / 25 m</th><th>Window</th><th>Pauses</th></tr></thead>
+        <tbody id="summaryBody"></tbody>
+      </table>
+      <div class="note">Benchmark: fastest 20 consecutive 25 m lengths that do not cross a pause.</div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
