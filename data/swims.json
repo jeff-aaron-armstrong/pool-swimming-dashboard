@@ -13,7 +13,170 @@
         "end_length": 37,
         "time_s": 732.39,
         "pace_s_per_100m": 146.478,
-        "mean_strokes_per_25m": 14.95
+        "mean_strokes_per_25m": 14.95,
+        "lengths": [
+          {
+            "length": 18,
+            "split_s": 36.16,
+            "pace_s_per_100m": 144.64,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 19,
+            "split_s": 35.92,
+            "pace_s_per_100m": 143.68,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 20,
+            "split_s": 37.11,
+            "pace_s_per_100m": 148.44,
+            "strokes": 15,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 21,
+            "split_s": 36.06,
+            "pace_s_per_100m": 144.24,
+            "strokes": 13,
+            "cadence": 22,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 22,
+            "split_s": 35.96,
+            "pace_s_per_100m": 143.84,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 23,
+            "split_s": 36.45,
+            "pace_s_per_100m": 145.8,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 24,
+            "split_s": 36.31,
+            "pace_s_per_100m": 145.24,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 25,
+            "split_s": 36.56,
+            "pace_s_per_100m": 146.24,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 26,
+            "split_s": 37.02,
+            "pace_s_per_100m": 148.08,
+            "strokes": 16,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 27,
+            "split_s": 36.45,
+            "pace_s_per_100m": 145.8,
+            "strokes": 17,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 28,
+            "split_s": 37.02,
+            "pace_s_per_100m": 148.08,
+            "strokes": 16,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 29,
+            "split_s": 35.84,
+            "pace_s_per_100m": 143.36,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 30,
+            "split_s": 37.32,
+            "pace_s_per_100m": 149.28,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 31,
+            "split_s": 38.03,
+            "pace_s_per_100m": 152.12,
+            "strokes": 18,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.3888888888888888
+          },
+          {
+            "length": 32,
+            "split_s": 37.44,
+            "pace_s_per_100m": 149.76,
+            "strokes": 16,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 33,
+            "split_s": 36.29,
+            "pace_s_per_100m": 145.16,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 34,
+            "split_s": 36.68,
+            "pace_s_per_100m": 146.72,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 35,
+            "split_s": 36.75,
+            "pace_s_per_100m": 147,
+            "strokes": 15,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 36,
+            "split_s": 36.76,
+            "pace_s_per_100m": 147.04,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 37,
+            "split_s": 36.26,
+            "pace_s_per_100m": 145.04,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          }
+        ],
+        "pace_sd_s_per_100m": 2.2860483026623166
       }
     },
     {
@@ -27,7 +190,170 @@
         "end_length": 22,
         "time_s": 703.48,
         "pace_s_per_100m": 140.696,
-        "mean_strokes_per_25m": 15.95
+        "mean_strokes_per_25m": 15.95,
+        "lengths": [
+          {
+            "length": 3,
+            "split_s": 35.32,
+            "pace_s_per_100m": 141.28,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 4,
+            "split_s": 34.84,
+            "pace_s_per_100m": 139.36,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 5,
+            "split_s": 35.59,
+            "pace_s_per_100m": 142.36,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 6,
+            "split_s": 35.84,
+            "pace_s_per_100m": 143.36,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 7,
+            "split_s": 35.29,
+            "pace_s_per_100m": 141.16,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 8,
+            "split_s": 34.64,
+            "pace_s_per_100m": 138.56,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 9,
+            "split_s": 35.26,
+            "pace_s_per_100m": 141.04,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 10,
+            "split_s": 34.84,
+            "pace_s_per_100m": 139.36,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 11,
+            "split_s": 36.15,
+            "pace_s_per_100m": 144.6,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 12,
+            "split_s": 35.32,
+            "pace_s_per_100m": 141.28,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 13,
+            "split_s": 36.38,
+            "pace_s_per_100m": 145.52,
+            "strokes": 16,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 14,
+            "split_s": 35.32,
+            "pace_s_per_100m": 141.28,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 15,
+            "split_s": 35.03,
+            "pace_s_per_100m": 140.12,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 16,
+            "split_s": 35.02,
+            "pace_s_per_100m": 140.08,
+            "strokes": 13,
+            "cadence": 22,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 17,
+            "split_s": 35.13,
+            "pace_s_per_100m": 140.52,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 18,
+            "split_s": 34.88,
+            "pace_s_per_100m": 139.52,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 19,
+            "split_s": 36.72,
+            "pace_s_per_100m": 146.88,
+            "strokes": 17,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 20,
+            "split_s": 34.01,
+            "pace_s_per_100m": 136.04,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 21,
+            "split_s": 33.89,
+            "pace_s_per_100m": 135.56,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 22,
+            "split_s": 34.01,
+            "pace_s_per_100m": 136.04,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          }
+        ],
+        "pace_sd_s_per_100m": 2.973295885217722
       }
     },
     {
@@ -41,7 +367,170 @@
         "end_length": 22,
         "time_s": 720.21,
         "pace_s_per_100m": 144.042,
-        "mean_strokes_per_25m": 15.2
+        "mean_strokes_per_25m": 15.2,
+        "lengths": [
+          {
+            "length": 3,
+            "split_s": 36.71,
+            "pace_s_per_100m": 146.84,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 4,
+            "split_s": 36.6,
+            "pace_s_per_100m": 146.4,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 5,
+            "split_s": 35.55,
+            "pace_s_per_100m": 142.2,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 6,
+            "split_s": 36.31,
+            "pace_s_per_100m": 145.24,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 7,
+            "split_s": 35.17,
+            "pace_s_per_100m": 140.68,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 8,
+            "split_s": 35.85,
+            "pace_s_per_100m": 143.4,
+            "strokes": 14,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 9,
+            "split_s": 35.7,
+            "pace_s_per_100m": 142.8,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 10,
+            "split_s": 35.6,
+            "pace_s_per_100m": 142.4,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 11,
+            "split_s": 35.44,
+            "pace_s_per_100m": 141.76,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 12,
+            "split_s": 35.88,
+            "pace_s_per_100m": 143.52,
+            "strokes": 17,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 13,
+            "split_s": 36.3,
+            "pace_s_per_100m": 145.2,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 14,
+            "split_s": 35.7,
+            "pace_s_per_100m": 142.8,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 15,
+            "split_s": 36.45,
+            "pace_s_per_100m": 145.8,
+            "strokes": 16,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 16,
+            "split_s": 36.05,
+            "pace_s_per_100m": 144.2,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 17,
+            "split_s": 35.99,
+            "pace_s_per_100m": 143.96,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 18,
+            "split_s": 35.71,
+            "pace_s_per_100m": 142.84,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 19,
+            "split_s": 35.17,
+            "pace_s_per_100m": 140.68,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 20,
+            "split_s": 36.15,
+            "pace_s_per_100m": 144.6,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 21,
+            "split_s": 36.58,
+            "pace_s_per_100m": 146.32,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 22,
+            "split_s": 37.3,
+            "pace_s_per_100m": 149.2,
+            "strokes": 15,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.6666666666666667
+          }
+        ],
+        "pace_sd_s_per_100m": 2.18259044546419
       }
     },
     {
@@ -55,7 +544,170 @@
         "end_length": 20,
         "time_s": 710.43,
         "pace_s_per_100m": 142.086,
-        "mean_strokes_per_25m": 16.6
+        "mean_strokes_per_25m": 16.6,
+        "lengths": [
+          {
+            "length": 1,
+            "split_s": 37.57,
+            "pace_s_per_100m": 150.28,
+            "strokes": 16,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 2,
+            "split_s": 37.28,
+            "pace_s_per_100m": 149.12,
+            "strokes": 17,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 3,
+            "split_s": 35.77,
+            "pace_s_per_100m": 143.08,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 4,
+            "split_s": 35.55,
+            "pace_s_per_100m": 142.2,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 5,
+            "split_s": 34.87,
+            "pace_s_per_100m": 139.48,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 6,
+            "split_s": 35.72,
+            "pace_s_per_100m": 142.88,
+            "strokes": 18,
+            "cadence": 30,
+            "distance_per_stroke_m": 1.3888888888888888
+          },
+          {
+            "length": 7,
+            "split_s": 34.01,
+            "pace_s_per_100m": 136.04,
+            "strokes": 17,
+            "cadence": 30,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 8,
+            "split_s": 35.01,
+            "pace_s_per_100m": 140.04,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 9,
+            "split_s": 35.89,
+            "pace_s_per_100m": 143.56,
+            "strokes": 17,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 10,
+            "split_s": 35.44,
+            "pace_s_per_100m": 141.76,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 11,
+            "split_s": 36,
+            "pace_s_per_100m": 144,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 12,
+            "split_s": 35.72,
+            "pace_s_per_100m": 142.88,
+            "strokes": 19,
+            "cadence": 32,
+            "distance_per_stroke_m": 1.3157894736842106
+          },
+          {
+            "length": 13,
+            "split_s": 35.49,
+            "pace_s_per_100m": 141.96,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 14,
+            "split_s": 35.4,
+            "pace_s_per_100m": 141.6,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 15,
+            "split_s": 35.29,
+            "pace_s_per_100m": 141.16,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 16,
+            "split_s": 34.62,
+            "pace_s_per_100m": 138.48,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 17,
+            "split_s": 35.13,
+            "pace_s_per_100m": 140.52,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 18,
+            "split_s": 33.15,
+            "pace_s_per_100m": 132.6,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 19,
+            "split_s": 38.29,
+            "pace_s_per_100m": 153.16,
+            "strokes": 17,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 20,
+            "split_s": 34.23,
+            "pace_s_per_100m": 136.92,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          }
+        ],
+        "pace_sd_s_per_100m": 4.747436316470964
       }
     },
     {
@@ -69,7 +721,170 @@
         "end_length": 22,
         "time_s": 657.45,
         "pace_s_per_100m": 131.49,
-        "mean_strokes_per_25m": 16
+        "mean_strokes_per_25m": 16,
+        "lengths": [
+          {
+            "length": 3,
+            "split_s": 34.31,
+            "pace_s_per_100m": 137.24,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 4,
+            "split_s": 33.18,
+            "pace_s_per_100m": 132.72,
+            "strokes": 17,
+            "cadence": 31,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 5,
+            "split_s": 34.02,
+            "pace_s_per_100m": 136.08,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 6,
+            "split_s": 33.14,
+            "pace_s_per_100m": 132.56,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 7,
+            "split_s": 33.41,
+            "pace_s_per_100m": 133.64,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 8,
+            "split_s": 37.17,
+            "pace_s_per_100m": 148.68,
+            "strokes": 18,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.3888888888888888
+          },
+          {
+            "length": 9,
+            "split_s": 32.47,
+            "pace_s_per_100m": 129.88,
+            "strokes": 15,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 10,
+            "split_s": 32.85,
+            "pace_s_per_100m": 131.4,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 11,
+            "split_s": 32.31,
+            "pace_s_per_100m": 129.24,
+            "strokes": 17,
+            "cadence": 32,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 12,
+            "split_s": 31.72,
+            "pace_s_per_100m": 126.88,
+            "strokes": 15,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 13,
+            "split_s": 32.54,
+            "pace_s_per_100m": 130.16,
+            "strokes": 16,
+            "cadence": 30,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 14,
+            "split_s": 32.47,
+            "pace_s_per_100m": 129.88,
+            "strokes": 17,
+            "cadence": 31,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 15,
+            "split_s": 33.86,
+            "pace_s_per_100m": 135.44,
+            "strokes": 17,
+            "cadence": 30,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 16,
+            "split_s": 32.32,
+            "pace_s_per_100m": 129.28,
+            "strokes": 17,
+            "cadence": 32,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 17,
+            "split_s": 32.54,
+            "pace_s_per_100m": 130.16,
+            "strokes": 16,
+            "cadence": 30,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 18,
+            "split_s": 32.66,
+            "pace_s_per_100m": 130.64,
+            "strokes": 17,
+            "cadence": 31,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 19,
+            "split_s": 30.52,
+            "pace_s_per_100m": 122.08,
+            "strokes": 16,
+            "cadence": 31,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 20,
+            "split_s": 31.34,
+            "pace_s_per_100m": 125.36,
+            "strokes": 16,
+            "cadence": 31,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 21,
+            "split_s": 32.69,
+            "pace_s_per_100m": 130.76,
+            "strokes": 16,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 22,
+            "split_s": 31.93,
+            "pace_s_per_100m": 127.72,
+            "strokes": 15,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.6666666666666667
+          }
+        ],
+        "pace_sd_s_per_100m": 5.399959064172327
       }
     },
     {
@@ -83,7 +898,170 @@
         "end_length": 58,
         "time_s": 679.81,
         "pace_s_per_100m": 135.962,
-        "mean_strokes_per_25m": 14.55
+        "mean_strokes_per_25m": 14.55,
+        "lengths": [
+          {
+            "length": 39,
+            "split_s": 33.62,
+            "pace_s_per_100m": 134.48,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 40,
+            "split_s": 32.58,
+            "pace_s_per_100m": 130.32,
+            "strokes": 15,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 41,
+            "split_s": 33.04,
+            "pace_s_per_100m": 132.16,
+            "strokes": 14,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 42,
+            "split_s": 34.53,
+            "pace_s_per_100m": 138.12,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 43,
+            "split_s": 34.74,
+            "pace_s_per_100m": 138.96,
+            "strokes": 17,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 44,
+            "split_s": 33.73,
+            "pace_s_per_100m": 134.92,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 45,
+            "split_s": 33.56,
+            "pace_s_per_100m": 134.24,
+            "strokes": 14,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 46,
+            "split_s": 34.46,
+            "pace_s_per_100m": 137.84,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 47,
+            "split_s": 33.6,
+            "pace_s_per_100m": 134.4,
+            "strokes": 14,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 48,
+            "split_s": 35.14,
+            "pace_s_per_100m": 140.56,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 49,
+            "split_s": 34.31,
+            "pace_s_per_100m": 137.24,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 50,
+            "split_s": 35.73,
+            "pace_s_per_100m": 142.92,
+            "strokes": 15,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 51,
+            "split_s": 34.99,
+            "pace_s_per_100m": 139.96,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 52,
+            "split_s": 33.48,
+            "pace_s_per_100m": 133.92,
+            "strokes": 13,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 53,
+            "split_s": 32.85,
+            "pace_s_per_100m": 131.4,
+            "strokes": 13,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 54,
+            "split_s": 33.56,
+            "pace_s_per_100m": 134.24,
+            "strokes": 14,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 55,
+            "split_s": 33.63,
+            "pace_s_per_100m": 134.52,
+            "strokes": 14,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 56,
+            "split_s": 33.71,
+            "pace_s_per_100m": 134.84,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 57,
+            "split_s": 34.31,
+            "pace_s_per_100m": 137.24,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 58,
+            "split_s": 34.24,
+            "pace_s_per_100m": 136.96,
+            "strokes": 14,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.7857142857142858
+          }
+        ],
+        "pace_sd_s_per_100m": 3.1890727905079093
       }
     },
     {
@@ -97,7 +1075,170 @@
         "end_length": 26,
         "time_s": 698.14,
         "pace_s_per_100m": 139.628,
-        "mean_strokes_per_25m": 15.6
+        "mean_strokes_per_25m": 15.6,
+        "lengths": [
+          {
+            "length": 7,
+            "split_s": 33.85,
+            "pace_s_per_100m": 135.4,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 8,
+            "split_s": 34.73,
+            "pace_s_per_100m": 138.92,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 9,
+            "split_s": 34.57,
+            "pace_s_per_100m": 138.28,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 10,
+            "split_s": 34.31,
+            "pace_s_per_100m": 137.24,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 11,
+            "split_s": 34.31,
+            "pace_s_per_100m": 137.24,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 12,
+            "split_s": 34.16,
+            "pace_s_per_100m": 136.64,
+            "strokes": 14,
+            "cadence": 25,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 13,
+            "split_s": 36.27,
+            "pace_s_per_100m": 145.08,
+            "strokes": 17,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 14,
+            "split_s": 36.6,
+            "pace_s_per_100m": 146.4,
+            "strokes": 17,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.4705882352941178
+          },
+          {
+            "length": 15,
+            "split_s": 34.43,
+            "pace_s_per_100m": 137.72,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 16,
+            "split_s": 35.01,
+            "pace_s_per_100m": 140.04,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 17,
+            "split_s": 37.43,
+            "pace_s_per_100m": 149.72,
+            "strokes": 15,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 18,
+            "split_s": 35.89,
+            "pace_s_per_100m": 143.56,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 19,
+            "split_s": 35.44,
+            "pace_s_per_100m": 141.76,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 20,
+            "split_s": 35.17,
+            "pace_s_per_100m": 140.68,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 21,
+            "split_s": 34.73,
+            "pace_s_per_100m": 138.92,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 22,
+            "split_s": 34.16,
+            "pace_s_per_100m": 136.64,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 23,
+            "split_s": 34.68,
+            "pace_s_per_100m": 138.72,
+            "strokes": 18,
+            "cadence": 31,
+            "distance_per_stroke_m": 1.3888888888888888
+          },
+          {
+            "length": 24,
+            "split_s": 35.33,
+            "pace_s_per_100m": 141.32,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 25,
+            "split_s": 35.02,
+            "pace_s_per_100m": 140.08,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 26,
+            "split_s": 32.05,
+            "pace_s_per_100m": 128.2,
+            "strokes": 16,
+            "cadence": 30,
+            "distance_per_stroke_m": 1.5625
+          }
+        ],
+        "pace_sd_s_per_100m": 4.511992907795848
       }
     },
     {
@@ -111,7 +1252,170 @@
         "end_length": 22,
         "time_s": 693.65,
         "pace_s_per_100m": 138.73,
-        "mean_strokes_per_25m": 12.8
+        "mean_strokes_per_25m": 12.8,
+        "lengths": [
+          {
+            "length": 3,
+            "split_s": 33.27,
+            "pace_s_per_100m": 133.08,
+            "strokes": 12,
+            "cadence": 22,
+            "distance_per_stroke_m": 2.0833333333333335
+          },
+          {
+            "length": 4,
+            "split_s": 35.61,
+            "pace_s_per_100m": 142.44,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 5,
+            "split_s": 34.01,
+            "pace_s_per_100m": 136.04,
+            "strokes": 13,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 6,
+            "split_s": 35.3,
+            "pace_s_per_100m": 141.2,
+            "strokes": 12,
+            "cadence": 20,
+            "distance_per_stroke_m": 2.0833333333333335
+          },
+          {
+            "length": 7,
+            "split_s": 34,
+            "pace_s_per_100m": 136,
+            "strokes": 13,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 8,
+            "split_s": 34.43,
+            "pace_s_per_100m": 137.72,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 9,
+            "split_s": 32.72,
+            "pace_s_per_100m": 130.88,
+            "strokes": 11,
+            "cadence": 20,
+            "distance_per_stroke_m": 2.272727272727273
+          },
+          {
+            "length": 10,
+            "split_s": 34.74,
+            "pace_s_per_100m": 138.96,
+            "strokes": 14,
+            "cadence": 24,
+            "distance_per_stroke_m": 1.7857142857142858
+          },
+          {
+            "length": 11,
+            "split_s": 34.15,
+            "pace_s_per_100m": 136.6,
+            "strokes": 13,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 12,
+            "split_s": 35.29,
+            "pace_s_per_100m": 141.16,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 13,
+            "split_s": 34.61,
+            "pace_s_per_100m": 138.44,
+            "strokes": 12,
+            "cadence": 21,
+            "distance_per_stroke_m": 2.0833333333333335
+          },
+          {
+            "length": 14,
+            "split_s": 34.84,
+            "pace_s_per_100m": 139.36,
+            "strokes": 13,
+            "cadence": 22,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 15,
+            "split_s": 35.73,
+            "pace_s_per_100m": 142.92,
+            "strokes": 12,
+            "cadence": 20,
+            "distance_per_stroke_m": 2.0833333333333335
+          },
+          {
+            "length": 16,
+            "split_s": 36.6,
+            "pace_s_per_100m": 146.4,
+            "strokes": 12,
+            "cadence": 20,
+            "distance_per_stroke_m": 2.0833333333333335
+          },
+          {
+            "length": 17,
+            "split_s": 34.28,
+            "pace_s_per_100m": 137.12,
+            "strokes": 11,
+            "cadence": 19,
+            "distance_per_stroke_m": 2.272727272727273
+          },
+          {
+            "length": 18,
+            "split_s": 34.61,
+            "pace_s_per_100m": 138.44,
+            "strokes": 13,
+            "cadence": 23,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 19,
+            "split_s": 35.26,
+            "pace_s_per_100m": 141.04,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 20,
+            "split_s": 37.01,
+            "pace_s_per_100m": 148.04,
+            "strokes": 13,
+            "cadence": 21,
+            "distance_per_stroke_m": 1.9230769230769231
+          },
+          {
+            "length": 21,
+            "split_s": 34.15,
+            "pace_s_per_100m": 136.6,
+            "strokes": 11,
+            "cadence": 19,
+            "distance_per_stroke_m": 2.272727272727273
+          },
+          {
+            "length": 22,
+            "split_s": 33.04,
+            "pace_s_per_100m": 132.16,
+            "strokes": 12,
+            "cadence": 22,
+            "distance_per_stroke_m": 2.0833333333333335
+          }
+        ],
+        "pace_sd_s_per_100m": 4.34602056332481
       }
     }
   ]
