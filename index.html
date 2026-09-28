@@ -1,33 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#08111f">
   <title>Pool Swimming Dashboard</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
-<header><h1>Pool Swimming Dashboard</h1><div class="subtitle">Breaststroke progress centred on the best rolling pause-free 500 m.</div></header>
-<main>
-  <section class="kpis">
-    <div class="card kpi"><div class="label">Latest best 500 m</div><div class="value" id="latestBest">—</div></div>
-    <div class="card kpi"><div class="label">Personal best 500 m pace</div><div class="value" id="pb500">—</div></div>
-    <div class="card kpi"><div class="label">Latest strokes / 25 m</div><div class="value" id="latestStrokes">—</div></div>
-    <div class="card kpi"><div class="label">Goal pace</div><div class="value">2:00 /100 m</div></div>
-  </section>
-  <section class="grid">
-    <div class="card plot-card"><div id="progression" class="plot"></div></div>
-    <div class="card plot-card"><div id="strokeTrend" class="plot"></div></div>
-    <div class="card plot-card"><div id="paceStroke" class="plot"></div></div>
-    <div class="card plot-card"><div id="wholeVsBest" class="plot"></div></div>
-  </section>
-  <section class="card table-card">
-    <h2>Session summary</h2>
-    <table><thead><tr><th>Date</th><th>Distance</th><th>Mean pace</th><th>Best 500 m</th><th>500 m time</th><th>Strokes /25 m</th><th>Window</th><th>Pauses</th></tr></thead>
-    <tbody id="summaryBody"></tbody></table>
-    <div class="note">Benchmark: fastest 20 consecutive 25 m lengths that do not cross a pause.</div>
-  </section>
-</main>
-<script src="app.js"></script>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">BREASTSTROKE · 25 M POOL</div>
+        <h1>Pool Swimming</h1>
+        <p>Progress measured by the fastest rolling 500 m that never crosses a pause.</p>
+      </div>
+      <div class="goal-chip"><span>Target</span><strong>2:00</strong><small>/100 m</small></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="kpis">
+      <div class="card kpi"><div class="kpi-label">Latest best 500 m</div><div class="kpi-value" id="latestBest">—</div><div class="kpi-sub" id="latestTime">—</div></div>
+      <div class="card kpi accent"><div class="kpi-label">Personal best</div><div class="kpi-value" id="pb500">—</div><div class="kpi-sub" id="pbDate">—</div></div>
+      <div class="card kpi"><div class="kpi-label">Latest stroke count</div><div class="kpi-value" id="latestStrokes">—</div><div class="kpi-sub">strokes / 25 m in best 500 m</div></div>
+      <div class="card kpi"><div class="kpi-label">Latest distance</div><div class="kpi-value" id="latestDistance">—</div><div class="kpi-sub" id="latestWindow">—</div></div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="card plot-card wide">
+        <div class="plot-heading"><div><h2>Best 500 m progression</h2><p>The headline metric.</p></div></div>
+        <div id="progression" class="plot plot-hero"></div>
+      </article>
+
+      <article class="card plot-card">
+        <div class="plot-heading"><div><h2>Pace distributions</h2><p>All 20 lengths inside each day's best 500 m.</p></div></div>
+        <div id="distributions" class="plot"></div>
+      </article>
+
+      <article class="card plot-card">
+        <div class="plot-heading"><div><h2>Pace × stroke count</h2><p>1.5σ covariance ellipses reveal the rhythm of each best 500 m.</p></div></div>
+        <div id="ellipses" class="plot"></div>
+      </article>
+
+      <article class="card plot-card wide">
+        <div class="plot-heading latest-heading">
+          <div><h2>Latest best 500 m</h2><p id="latestDetailSubtitle">Length-by-length pace and stroke count.</p></div>
+          <select id="latestSelector" aria-label="Choose swim"></select>
+        </div>
+        <div id="latestDetail" class="plot plot-wide"></div>
+      </article>
+    </section>
+
+    <section class="card table-card">
+      <div class="table-title"><div><h2>Swimming history</h2><p>Best rolling pause-free 500 m is the canonical benchmark.</p></div></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Date</th><th>Distance</th><th>Whole swim</th><th>Best 500 m pace</th><th>500 m time</th><th>Strokes /25 m</th><th>Pace SD</th><th>Window</th></tr></thead>
+          <tbody id="summaryBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>Interactive Plotly dashboard · data stored in this GitHub repository</footer>
+  <script src="app.js"></script>
 </body>
 </html>
