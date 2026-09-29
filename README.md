@@ -1,5 +1,7 @@
 # Pool Swimming Dashboard
 
+## 🏊 [Open the live swimming dashboard](https://jeff-aaron-armstrong.github.io/pool-swimming-dashboard/)
+
 Interactive dashboard for Jeff's pool-swimming data.
 
 ## Headline benchmark
@@ -19,7 +21,8 @@ Then open `http://localhost:8000`.
 
 ## GitHub Pages
 
-This dashboard is designed to work as a static GitHub Pages site from the repository root.
+Live site:
+https://jeff-aaron-armstrong.github.io/pool-swimming-dashboard/
 
 ## Data
 
