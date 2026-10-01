@@ -71,12 +71,19 @@ def parse_fit(path):
                 "distance_per_stroke_m":25/strokes if strokes else None
             })
 
-    ts=np.array([r["timestamp"] for r in active],dtype=float)
+    # COROS pool-swim files may write stop_all timestamps onto a compressed
+    # active-time axis. A stop event can therefore appear inside a reconstructed
+    # length rather than exactly at its boundary. Jeff only pauses after complete
+    # 50 m pairs in a 25 m pool, so align each stop to the nearest EVEN length end.
+    end_ts=np.array([r["timestamp"] for r in active],dtype=float)
+    even_boundaries=np.array([i for i in range(2,len(active)+1,2)],dtype=int)
     pauses=[]
     for r in events:
         if dec(r,0)==0 and dec(r,1)==4:
             t=dec(r,253)
-            idx=int(np.argmin(np.abs(ts-t)))+1
+            if not len(even_boundaries): continue
+            diffs=np.abs(end_ts[even_boundaries-1]-t)
+            idx=int(even_boundaries[int(np.argmin(diffs))])
             if idx < len(active): pauses.append(idx)
     return active, sorted(set(pauses))
 
