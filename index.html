@@ -22,9 +22,9 @@
 
   <main>
     <section class="kpis">
-      <div class="card kpi"><div class="kpi-label">Latest best 500 m</div><div class="kpi-value" id="latestBest">—</div><div class="kpi-sub" id="latestTime">—</div></div>
+      <div class="card kpi"><div class="kpi-label">Latest benchmark</div><div class="kpi-value" id="latestBest">—</div><div class="kpi-sub" id="latestTime">—</div></div>
       <div class="card kpi accent"><div class="kpi-label">Personal best</div><div class="kpi-value" id="pb500">—</div><div class="kpi-sub" id="pbDate">—</div></div>
-      <div class="card kpi"><div class="kpi-label">Latest stroke count</div><div class="kpi-value" id="latestStrokes">—</div><div class="kpi-sub">strokes / 25 m in best 500 m</div></div>
+      <div class="card kpi"><div class="kpi-label">Latest stroke count</div><div class="kpi-value" id="latestStrokes">—</div><div class="kpi-sub" id="latestStrokeSub">strokes / 25 m in latest benchmark</div></div>
       <div class="card kpi"><div class="kpi-label">Latest distance</div><div class="kpi-value" id="latestDistance">—</div><div class="kpi-sub" id="latestWindow">—</div></div>
     </section>
 
@@ -46,7 +46,7 @@
 
       <article class="card plot-card wide">
         <div class="plot-heading latest-heading">
-          <div><h2>Latest best 500 m</h2><p id="latestDetailSubtitle">Length-by-length pace and stroke count.</p></div>
+          <div><h2>Session benchmark detail</h2><p id="latestDetailSubtitle">Length-by-length pace and stroke count.</p></div>
           <select id="latestSelector" aria-label="Choose swim"></select>
         </div>
         <div id="latestDetail" class="plot plot-wide"></div>
