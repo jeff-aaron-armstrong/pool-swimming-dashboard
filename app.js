@@ -35,21 +35,24 @@ function ellipse(xs,ys,n=1.5,steps=100){
 fetch("data/swims.json").then(r=>r.json()).then(data=>{
   const S=data.sessions, B=S.filter(s=>s.best_500m), latest=S[S.length-1];
   const pb=B.reduce((a,b)=>a.best_500m.pace_s_per_100m<b.best_500m.pace_s_per_100m?a:b);
-  const latestMetric=latest.best_500m || latest.longest_continuous;
+  const latestMetric=latest.best_500m || latest.longest_continuous || null;
 
   if(latest.best_500m){
     document.getElementById("latestBest").textContent=paceFmt(latest.best_500m.pace_s_per_100m)+" /100 m";
     document.getElementById("latestTime").textContent=timeFmt(latest.best_500m.time_s)+" for 500 m";
+  }else if(latestMetric){
+    document.getElementById("latestBest").textContent="No verified 500 m";
+    document.getElementById("latestTime").textContent="Longest verified block: "+latestMetric.distance_m+" m at "+paceFmt(latestMetric.pace_s_per_100m)+" /100 m";
   }else{
-    document.getElementById("latestBest").textContent="No pause-free 500 m";
-    document.getElementById("latestTime").textContent="Longest block: "+latestMetric.distance_m+" m at "+paceFmt(latestMetric.pace_s_per_100m)+" /100 m";
+    document.getElementById("latestBest").textContent="Set boundaries unavailable";
+    document.getElementById("latestTime").textContent="COROS FIT does not preserve the app's rest/set structure for this swim";
   }
   document.getElementById("pb500").textContent=paceFmt(pb.best_500m.pace_s_per_100m)+" /100 m";
   document.getElementById("pbDate").textContent=dateFmt(pb.date)+" · "+timeFmt(pb.best_500m.time_s);
-  document.getElementById("latestStrokes").textContent=latestMetric.mean_strokes_per_25m.toFixed(2);
-  document.getElementById("latestStrokeSub").textContent="strokes / 25 m in "+(latest.best_500m?"best 500 m":"longest continuous block");
+  document.getElementById("latestStrokes").textContent=(latestMetric?latestMetric.mean_strokes_per_25m:latest.mean_strokes_per_25m).toFixed(2);
+  document.getElementById("latestStrokeSub").textContent=latestMetric ? "strokes / 25 m in "+(latest.best_500m?"best 500 m":"verified continuous block") : "whole-swim mean strokes / 25 m";
   document.getElementById("latestDistance").textContent=latest.distance_m+" m";
-  document.getElementById("latestWindow").textContent=(latest.best_500m?"Best 500 m":"Longest continuous")+" L"+latestMetric.start_length+"–"+latestMetric.end_length;
+  document.getElementById("latestWindow").textContent=latestMetric ? ((latest.best_500m?"Best 500 m":"Continuous block")+" L"+latestMetric.start_length+"–"+latestMetric.end_length) : "Set boundaries unresolved in FIT";
 
   const prog=[
     {x:B.map(s=>s.date),y:B.map(s=>s.best_500m.pace_s_per_100m),type:"scatter",mode:"lines+markers+text",name:"Best 500 m",
@@ -88,7 +91,13 @@ fetch("data/swims.json").then(r=>r.json()).then(data=>{
   selector.value=S.length-1;
 
   function detail(i){
-    const s=S[i],M=s.best_500m||s.longest_continuous,L=M.lengths,x=L.map((_,j)=>j+1),c=COLORS[i%COLORS.length];
+    const s=S[i],M=s.best_500m||s.longest_continuous||null,c=COLORS[i%COLORS.length];
+    if(!M){
+      document.getElementById("latestDetailSubtitle").textContent=dateFmt(s.date)+" · set boundaries unavailable from FIT export";
+      Plotly.react("latestDetail",[],{...layout(),annotations:[{text:"No verified pause-free block can be reconstructed from this FIT file.",showarrow:false,font:{color:TXT,size:15}}]},CONFIG);
+      return;
+    }
+    const L=M.lengths,x=L.map((_,j)=>j+1);
     const label=s.best_500m?"best 500 m":"longest continuous "+M.distance_m+" m";
     document.getElementById("latestDetailSubtitle").textContent=dateFmt(s.date)+" · "+label+" · L"+M.start_length+"–L"+M.end_length+" · "+timeFmt(M.time_s);
     const traces=[
@@ -111,10 +120,14 @@ fetch("data/swims.json").then(r=>r.json()).then(data=>{
         "<td class='best'>"+paceFmt(s.best_500m.pace_s_per_100m)+"</td><td>"+timeFmt(s.best_500m.time_s)+"</td>"+
         "<td>"+s.best_500m.mean_strokes_per_25m.toFixed(2)+"</td><td>"+s.best_500m.pace_sd_s_per_100m.toFixed(1)+" s</td>"+
         "<td>L"+s.best_500m.start_length+"–"+s.best_500m.end_length+"</td>";
-    }else{
+    }else if(s.longest_continuous){
       tr.innerHTML="<td>"+dateFmt(s.date)+"</td><td>"+s.distance_m+" m</td><td>"+paceFmt(s.mean_pace_s_per_100m)+"</td>"+
         "<td>—</td><td>—</td><td>"+s.longest_continuous.mean_strokes_per_25m.toFixed(2)+"*</td><td>—</td>"+
         "<td>No 500 m; longest "+s.longest_continuous.distance_m+" m, L"+s.longest_continuous.start_length+"–"+s.longest_continuous.end_length+"</td>";
+    }else{
+      tr.innerHTML="<td>"+dateFmt(s.date)+"</td><td>"+s.distance_m+" m</td><td>"+paceFmt(s.mean_pace_s_per_100m)+"</td>"+
+        "<td>unverified</td><td>—</td><td>"+s.mean_strokes_per_25m.toFixed(2)+"*</td><td>—</td>"+
+        "<td>Set boundaries unavailable from FIT</td>";
     }
     tbody.appendChild(tr);
   });
