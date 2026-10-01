@@ -1,5 +1,5 @@
 const CONFIG={responsive:true,displaylogo:false,scrollZoom:false,modeBarButtonsToRemove:["lasso2d","select2d"]};
-const COLORS=["#4fd1c5","#7aa2ff","#f6c177","#c4a7e7","#eb6f92","#9ccfd8","#f2ae49","#a7c7e7"];
+const COLORS=["#4fd1c5","#7aa2ff","#f6c177","#c4a7e7","#eb6f92","#9ccfd8","#f2ae49","#a7c7e7","#63c174"];
 const GRID="rgba(255,255,255,.07)", TXT="#edf4ff", MUTED="#8ca0ba";
 const paceTicks=[120,125,130,135,140,145,150,155,160];
 
@@ -33,28 +33,36 @@ function ellipse(xs,ys,n=1.5,steps=100){
 }
 
 fetch("data/swims.json").then(r=>r.json()).then(data=>{
-  const S=data.sessions, latest=S[S.length-1], pb=S.reduce((a,b)=>a.best_500m.pace_s_per_100m<b.best_500m.pace_s_per_100m?a:b);
+  const S=data.sessions, B=S.filter(s=>s.best_500m), latest=S[S.length-1];
+  const pb=B.reduce((a,b)=>a.best_500m.pace_s_per_100m<b.best_500m.pace_s_per_100m?a:b);
+  const latestMetric=latest.best_500m || latest.longest_continuous;
 
-  document.getElementById("latestBest").textContent=paceFmt(latest.best_500m.pace_s_per_100m)+" /100 m";
-  document.getElementById("latestTime").textContent=timeFmt(latest.best_500m.time_s)+" for 500 m";
+  if(latest.best_500m){
+    document.getElementById("latestBest").textContent=paceFmt(latest.best_500m.pace_s_per_100m)+" /100 m";
+    document.getElementById("latestTime").textContent=timeFmt(latest.best_500m.time_s)+" for 500 m";
+  }else{
+    document.getElementById("latestBest").textContent="No pause-free 500 m";
+    document.getElementById("latestTime").textContent="Longest block: "+latestMetric.distance_m+" m at "+paceFmt(latestMetric.pace_s_per_100m)+" /100 m";
+  }
   document.getElementById("pb500").textContent=paceFmt(pb.best_500m.pace_s_per_100m)+" /100 m";
   document.getElementById("pbDate").textContent=dateFmt(pb.date)+" · "+timeFmt(pb.best_500m.time_s);
-  document.getElementById("latestStrokes").textContent=latest.best_500m.mean_strokes_per_25m.toFixed(2);
+  document.getElementById("latestStrokes").textContent=latestMetric.mean_strokes_per_25m.toFixed(2);
+  document.getElementById("latestStrokeSub").textContent="strokes / 25 m in "+(latest.best_500m?"best 500 m":"longest continuous block");
   document.getElementById("latestDistance").textContent=latest.distance_m+" m";
-  document.getElementById("latestWindow").textContent="Best window L"+latest.best_500m.start_length+"–"+latest.best_500m.end_length;
+  document.getElementById("latestWindow").textContent=(latest.best_500m?"Best 500 m":"Longest continuous")+" L"+latestMetric.start_length+"–"+latestMetric.end_length;
 
   const prog=[
-    {x:S.map(s=>s.date),y:S.map(s=>s.best_500m.pace_s_per_100m),type:"scatter",mode:"lines+markers+text",name:"Best 500 m",
+    {x:B.map(s=>s.date),y:B.map(s=>s.best_500m.pace_s_per_100m),type:"scatter",mode:"lines+markers+text",name:"Best 500 m",
      line:{width:3,color:COLORS[0]},marker:{size:9,color:COLORS[0],line:{width:2,color:"#07101d"}},
-     text:S.map(s=>paceFmt(s.best_500m.pace_s_per_100m)),textposition:"top center",textfont:{size:10,color:TXT},
-     customdata:S.map(s=>[timeFmt(s.best_500m.time_s),s.best_500m.mean_strokes_per_25m,s.best_500m.start_length,s.best_500m.end_length]),
+     text:B.map(s=>paceFmt(s.best_500m.pace_s_per_100m)),textposition:"top center",textfont:{size:10,color:TXT},
+     customdata:B.map(s=>[timeFmt(s.best_500m.time_s),s.best_500m.mean_strokes_per_25m,s.best_500m.start_length,s.best_500m.end_length]),
      hovertemplate:"%{x}<br><b>%{y:.1f} s/100 m</b><br>500 m %{customdata[0]}<br>%{customdata[1]:.2f} strokes/25 m<br>L%{customdata[2]}–%{customdata[3]}<extra></extra>"},
-    {x:S.map(s=>s.date),y:S.map(()=>120),type:"scatter",mode:"lines",name:"2:00 goal",line:{width:1.5,dash:"dash",color:"rgba(255,255,255,.45)"},hoverinfo:"skip"}
+    {x:B.map(s=>s.date),y:B.map(()=>120),type:"scatter",mode:"lines",name:"2:00 goal",line:{width:1.5,dash:"dash",color:"rgba(255,255,255,.45)"},hoverinfo:"skip"}
   ];
   const lp=layout();lp.margin={l:70,r:30,t:20,b:55};lp.yaxis=paceAxis("Best 500 m pace",118,152);lp.xaxis={title:"Date",gridcolor:GRID,tickfont:{color:MUTED},titlefont:{color:MUTED}};
   Plotly.newPlot("progression",prog,lp,CONFIG);
 
-  const violins=S.map((s,i)=>({
+  const violins=B.map((s,i)=>({
     type:"violin",name:dateFmt(s.date),x:Array(20).fill(dateFmt(s.date)),y:s.best_500m.lengths.map(v=>v.pace_s_per_100m),
     box:{visible:true},meanline:{visible:true},points:"all",jitter:.18,pointpos:0,
     marker:{size:5,opacity:.5,color:COLORS[i%COLORS.length]},line:{color:COLORS[i%COLORS.length],width:1.8},
@@ -64,7 +72,7 @@ fetch("data/swims.json").then(r=>r.json()).then(data=>{
   Plotly.newPlot("distributions",violins,ld,CONFIG);
 
   const ellipseTraces=[];
-  S.forEach((s,i)=>{
+  B.forEach((s,i)=>{
     const c=COLORS[i%COLORS.length], L=s.best_500m.lengths, xs=L.map(v=>v.strokes),ys=L.map(v=>v.pace_s_per_100m),e=ellipse(xs,ys);
     ellipseTraces.push({x:xs,y:ys,type:"scatter",mode:"markers",name:dateFmt(s.date),marker:{size:6,color:c,opacity:.38},
       hovertemplate:dateFmt(s.date)+"<br>%{x} strokes<br>%{y:.1f} s/100 m<extra></extra>"});
@@ -80,14 +88,15 @@ fetch("data/swims.json").then(r=>r.json()).then(data=>{
   selector.value=S.length-1;
 
   function detail(i){
-    const s=S[i],L=s.best_500m.lengths,x=L.map((_,j)=>j+1),c=COLORS[i%COLORS.length];
-    document.getElementById("latestDetailSubtitle").textContent=dateFmt(s.date)+" · L"+s.best_500m.start_length+"–L"+s.best_500m.end_length+" · "+timeFmt(s.best_500m.time_s);
+    const s=S[i],M=s.best_500m||s.longest_continuous,L=M.lengths,x=L.map((_,j)=>j+1),c=COLORS[i%COLORS.length];
+    const label=s.best_500m?"best 500 m":"longest continuous "+M.distance_m+" m";
+    document.getElementById("latestDetailSubtitle").textContent=dateFmt(s.date)+" · "+label+" · L"+M.start_length+"–L"+M.end_length+" · "+timeFmt(M.time_s);
     const traces=[
       {x,y:L.map(v=>v.pace_s_per_100m),type:"scatter",mode:"lines+markers",name:"Pace",line:{width:2.5,color:c},marker:{size:7,color:c},
-       customdata:L.map(v=>[v.length,v.strokes,v.cadence]),hovertemplate:"Best-500 length %{x}<br>Pool length %{customdata[0]}<br>Pace %{y:.1f} s/100 m<br>%{customdata[1]} strokes<br>Cadence %{customdata[2]}<extra></extra>"},
+       customdata:L.map(v=>[v.length,v.strokes,v.cadence]),hovertemplate:"Block length %{x}<br>Pool length %{customdata[0]}<br>Pace %{y:.1f} s/100 m<br>%{customdata[1]} strokes<br>Cadence %{customdata[2]}<extra></extra>"},
       {x,y:L.map(v=>v.strokes),type:"bar",name:"Strokes",yaxis:"y2",marker:{color:"rgba(255,255,255,.15)"},hovertemplate:"%{y} strokes<extra></extra>"}
     ];
-    const l=layout();l.margin={l:70,r:60,t:15,b:55};l.barmode="overlay";l.xaxis={title:"Length within best 500 m",dtick:1,gridcolor:GRID,tickfont:{color:MUTED},titlefont:{color:MUTED}};
+    const l=layout();l.margin={l:70,r:60,t:15,b:55};l.barmode="overlay";l.xaxis={title:"Length within selected block",dtick:1,gridcolor:GRID,tickfont:{color:MUTED},titlefont:{color:MUTED}};
     l.yaxis=paceAxis("Pace",120,158);l.yaxis2={title:"Strokes / 25 m",overlaying:"y",side:"right",rangemode:"tozero",gridcolor:"rgba(0,0,0,0)",tickfont:{color:MUTED},titlefont:{color:MUTED}};
     l.legend={orientation:"h",y:-.2,font:{size:10,color:MUTED}};
     Plotly.react("latestDetail",traces,l,CONFIG);
@@ -97,10 +106,16 @@ fetch("data/swims.json").then(r=>r.json()).then(data=>{
   const tbody=document.getElementById("summaryBody");
   S.forEach(s=>{
     const tr=document.createElement("tr");
-    tr.innerHTML="<td>"+dateFmt(s.date)+"</td><td>"+s.distance_m+" m</td><td>"+paceFmt(s.mean_pace_s_per_100m)+"</td>"+
-      "<td class='best'>"+paceFmt(s.best_500m.pace_s_per_100m)+"</td><td>"+timeFmt(s.best_500m.time_s)+"</td>"+
-      "<td>"+s.best_500m.mean_strokes_per_25m.toFixed(2)+"</td><td>"+s.best_500m.pace_sd_s_per_100m.toFixed(1)+" s</td>"+
-      "<td>L"+s.best_500m.start_length+"–"+s.best_500m.end_length+"</td>";
+    if(s.best_500m){
+      tr.innerHTML="<td>"+dateFmt(s.date)+"</td><td>"+s.distance_m+" m</td><td>"+paceFmt(s.mean_pace_s_per_100m)+"</td>"+
+        "<td class='best'>"+paceFmt(s.best_500m.pace_s_per_100m)+"</td><td>"+timeFmt(s.best_500m.time_s)+"</td>"+
+        "<td>"+s.best_500m.mean_strokes_per_25m.toFixed(2)+"</td><td>"+s.best_500m.pace_sd_s_per_100m.toFixed(1)+" s</td>"+
+        "<td>L"+s.best_500m.start_length+"–"+s.best_500m.end_length+"</td>";
+    }else{
+      tr.innerHTML="<td>"+dateFmt(s.date)+"</td><td>"+s.distance_m+" m</td><td>"+paceFmt(s.mean_pace_s_per_100m)+"</td>"+
+        "<td>—</td><td>—</td><td>"+s.longest_continuous.mean_strokes_per_25m.toFixed(2)+"*</td><td>—</td>"+
+        "<td>No 500 m; longest "+s.longest_continuous.distance_m+" m, L"+s.longest_continuous.start_length+"–"+s.longest_continuous.end_length+"</td>";
+    }
     tbody.appendChild(tr);
   });
 }).catch(err=>{
