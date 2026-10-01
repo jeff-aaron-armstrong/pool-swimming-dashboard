@@ -1423,7 +1423,7 @@
       "distance_m": 1100,
       "mean_pace_s_per_100m": 130.125,
       "mean_strokes_per_25m": 14.705,
-      "pauses": 2,
+      "pauses": 3,
       "best_500m": {
         "start_length": 2,
         "end_length": 21,
@@ -1593,7 +1593,18 @@
           }
         ],
         "pace_sd_s_per_100m": 2.475169319035518
-      }
+      },
+      "pause_boundaries_after_length": [
+        22,
+        28,
+        38
+      ],
+      "segmentation_status": "resolved_from_coros_app_screenshot",
+      "notes": [
+        "Set/rest boundaries resolved from COROS app screenshot.",
+        "Chronological pause-free sections: 550 m (L1–22), 150 m (L23–28), 250 m (L29–38), 150 m (L39–44).",
+        "The best 500 m L2–21 lies wholly inside the first 550 m section, so the 10:54.65 / 2:10.93 benchmark is confirmed."
+      ]
     },
     {
       "date": "2026-10-01",
