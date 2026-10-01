@@ -1600,17 +1600,256 @@
       "distance_m": 1700,
       "mean_pace_s_per_100m": 134.526,
       "mean_strokes_per_25m": 15.118,
-      "pauses": null,
-      "pause_boundaries_after_length": null,
-      "best_500m": null,
-      "segments": [],
+      "pauses": 6,
+      "pause_boundaries_after_length": [
+        12,
+        28,
+        34,
+        42,
+        46,
+        48
+      ],
+      "best_500m": {
+        "start_length": 49,
+        "end_length": 68,
+        "time_s": 676.42,
+        "pace_s_per_100m": 135.284,
+        "mean_strokes_per_25m": 15.2,
+        "pace_sd_s_per_100m": 2.512382806902853,
+        "lengths": [
+          {
+            "length": 49,
+            "split_s": 35.23,
+            "pace_s_per_100m": 140.92,
+            "strokes": 16,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 50,
+            "split_s": 33.74,
+            "pace_s_per_100m": 134.96,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 51,
+            "split_s": 33.18,
+            "pace_s_per_100m": 132.72,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 52,
+            "split_s": 33.86,
+            "pace_s_per_100m": 135.44,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 53,
+            "split_s": 33.14,
+            "pace_s_per_100m": 132.56,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 54,
+            "split_s": 33.71,
+            "pace_s_per_100m": 134.84,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 55,
+            "split_s": 33.33,
+            "pace_s_per_100m": 133.32,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 56,
+            "split_s": 34.12,
+            "pace_s_per_100m": 136.48,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 57,
+            "split_s": 34.13,
+            "pace_s_per_100m": 136.52,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 58,
+            "split_s": 34.31,
+            "pace_s_per_100m": 137.24,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 59,
+            "split_s": 33.86,
+            "pace_s_per_100m": 135.44,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 60,
+            "split_s": 33.34,
+            "pace_s_per_100m": 133.36,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 61,
+            "split_s": 34.56,
+            "pace_s_per_100m": 138.24,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 62,
+            "split_s": 33.3,
+            "pace_s_per_100m": 133.2,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 63,
+            "split_s": 33.15,
+            "pace_s_per_100m": 132.6,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 64,
+            "split_s": 35.02,
+            "pace_s_per_100m": 140.08,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 65,
+            "split_s": 33.56,
+            "pace_s_per_100m": 134.24,
+            "strokes": 15,
+            "cadence": 27,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 66,
+            "split_s": 34.31,
+            "pace_s_per_100m": 137.24,
+            "strokes": 15,
+            "cadence": 26,
+            "distance_per_stroke_m": 1.6666666666666667
+          },
+          {
+            "length": 67,
+            "split_s": 33.03,
+            "pace_s_per_100m": 132.12,
+            "strokes": 16,
+            "cadence": 29,
+            "distance_per_stroke_m": 1.5625
+          },
+          {
+            "length": 68,
+            "split_s": 33.54,
+            "pace_s_per_100m": 134.16,
+            "strokes": 16,
+            "cadence": 28,
+            "distance_per_stroke_m": 1.5625
+          }
+        ]
+      },
+      "segments": [
+        {
+          "segment": 1,
+          "start_length": 1,
+          "end_length": 12,
+          "distance_m": 300,
+          "time_s": 403.76,
+          "pace_s_per_100m": 134.587,
+          "mean_strokes_per_25m": 15.25
+        },
+        {
+          "segment": 2,
+          "start_length": 13,
+          "end_length": 28,
+          "distance_m": 400,
+          "time_s": 553.14,
+          "pace_s_per_100m": 138.285,
+          "mean_strokes_per_25m": 15.188
+        },
+        {
+          "segment": 3,
+          "start_length": 29,
+          "end_length": 34,
+          "distance_m": 150,
+          "time_s": 198.99,
+          "pace_s_per_100m": 132.66,
+          "mean_strokes_per_25m": 15.333
+        },
+        {
+          "segment": 4,
+          "start_length": 35,
+          "end_length": 42,
+          "distance_m": 200,
+          "time_s": 262.84,
+          "pace_s_per_100m": 131.42,
+          "mean_strokes_per_25m": 15
+        },
+        {
+          "segment": 5,
+          "start_length": 43,
+          "end_length": 46,
+          "distance_m": 100,
+          "time_s": 132.69,
+          "pace_s_per_100m": 132.69,
+          "mean_strokes_per_25m": 15
+        },
+        {
+          "segment": 6,
+          "start_length": 47,
+          "end_length": 48,
+          "distance_m": 50,
+          "time_s": 59.1,
+          "pace_s_per_100m": 118.2,
+          "mean_strokes_per_25m": 13
+        },
+        {
+          "segment": 7,
+          "start_length": 49,
+          "end_length": 68,
+          "distance_m": 500,
+          "time_s": 676.42,
+          "pace_s_per_100m": 135.284,
+          "mean_strokes_per_25m": 15.2
+        }
+      ],
       "notes": [
-        "The COROS FIT export does not preserve the app's set/rest boundaries reliably for this session.",
-        "Timer stop_all events occur at active distances 300, 775, 1000, 1250, 1475 and 1575 m, including odd 25 m positions, so they are not valid proxies for Jeff's actual rests after 50 m pairs.",
-        "All 68 Length messages are active; there are no idle Length messages and only one Lap summary, so the app's long unpaused end section cannot be reconstructed from this FIT alone.",
+        "Set/rest boundaries resolved from COROS app screenshot, not from FIT timer STOP_ALL events.",
+        "Chronological unpaused sections: 300 m, 400 m, 150 m, 200 m, 100 m, 50 m, 500 m.",
         "Length 47 is a genuine 25 m front-crawl length; all other lengths are breaststroke."
       ],
-      "segmentation_status": "not_recoverable_from_coros_fit"
+      "segmentation_status": "resolved_from_coros_app_screenshot"
     }
   ]
 }
