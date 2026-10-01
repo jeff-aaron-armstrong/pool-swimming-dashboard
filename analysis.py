@@ -71,21 +71,14 @@ def parse_fit(path):
                 "distance_per_stroke_m":25/strokes if strokes else None
             })
 
-    # COROS pool-swim files may write stop_all timestamps onto a compressed
-    # active-time axis. A stop event can therefore appear inside a reconstructed
-    # length rather than exactly at its boundary. Jeff only pauses after complete
-    # 50 m pairs in a 25 m pool, so align each stop to the nearest EVEN length end.
-    end_ts=np.array([r["timestamp"] for r in active],dtype=float)
-    even_boundaries=np.array([i for i in range(2,len(active)+1,2)],dtype=int)
+    # Important COROS caveat:
+    # Do NOT infer pool-set/rest boundaries from timer STOP_ALL events alone.
+    # COROS FIT exports can contain STOP_ALL events at positions that do not
+    # correspond to the set/rest boundaries shown in the COROS app. For a
+    # pause-free benchmark, use explicit idle Length/Lap structure when present,
+    # or externally supplied set boundaries from the COROS app.
     pauses=[]
-    for r in events:
-        if dec(r,0)==0 and dec(r,1)==4:
-            t=dec(r,253)
-            if not len(even_boundaries): continue
-            diffs=np.abs(end_ts[even_boundaries-1]-t)
-            idx=int(even_boundaries[int(np.argmin(diffs))])
-            if idx < len(active): pauses.append(idx)
-    return active, sorted(set(pauses))
+    return active, pauses
 
 def best_pause_free_500(active, pauses):
     bounds=[0]+pauses+[len(active)]
